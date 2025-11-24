@@ -1,73 +1,53 @@
-# 🧩 5. (placeholder) / Título pendiente
+## Maximum Subarray (English)
 
-## 🇬🇧 English Version
+Given an integer array `nums`, find the subarray with the largest sum and return its sum.
 
-Este archivo estaba duplicado o mal ubicado. A continuación se incluye el enunciado corregido del problema "Product of Array Except Self" si ese era el objetivo; si este archivo debe contener otro enunciado, dime cuál y lo adapto.
+### Example 1
+**Input:** `nums = [-2,1,-3,4,-1,2,1,-5,4]`  
+**Output:** `6`  
+**Explanation:** The subarray `[4,-1,2,1]` has the largest sum: `6`.
 
-Given an integer array `nums`, return an array `answer` such that `answer[i]` is equal to the **product of all the elements of `nums` except `nums[i]`**.
+### Example 2
+**Input:** `nums = [1]`  
+**Output:** `1`  
+**Explanation:** The subarray `[1]` has the largest sum: `1`.
 
-The product of any prefix or suffix of `nums` is guaranteed to fit in a **32-bit integer**.
+### Example 3
+**Input:** `nums = [5,4,-1,7,8]`  
+**Output:** `23`  
+**Explanation:** The subarray `[5,4,-1,7,8]` has the largest sum: `23`.
 
-You must write an algorithm that runs in **O(n)** time and **without using the division operation**.
+### Constraints
+- `1 <= nums.length <= 10^5`
+- `-10^4 <= nums[i] <= 10^4`
 
-### 🧠 Examples
-
-#### Example 1
-```text
-Input: nums = [1,2,3,4]
-Output: [24,12,8,6]
-```
-
-#### Example 2
-```text
-Input: nums = [-1,1,0,-3,3]
-Output: [0,0,9,0,0]
-```
-
-### ⚙️ Constraints
-
-- 2 <= nums.length <= 10⁵
-- -30 <= nums[i] <= 30
-- The input is generated such that answer[i] fits in a 32-bit integer.
-
-🚀 Follow-up
-
-Can you solve the problem in O(1) extra space complexity?
-(The output array does not count as extra space for space complexity analysis.)
+### Follow-up
+If you have figured out the **O(n)** solution, try coding another solution using the **divide and conquer** approach, which is more subtle.
 
 ---
 
-## 🇪🇸 Versión en Español
+## Subarreglo de Suma Máxima (Español)
 
-Si este archivo debía ser otro problema, indícalo; por ahora dejo la versión en español del enunciado corregido abajo.
+Dado un arreglo de enteros `nums`, encuentra el subarreglo con la suma más grande y devuelve dicha suma.
 
-Dado un arreglo de enteros `nums`, devuelve un arreglo `answer` tal que `answer[i]` sea igual al **producto de todos los elementos de `nums` excepto `nums[i]`**.
+### Ejemplo 1
+**Entrada:** `nums = [-2,1,-3,4,-1,2,1,-5,4]`  
+**Salida:** `6`  
+**Explicación:** El subarreglo `[4,-1,2,1]` tiene la suma más grande: `6`.
 
-Se garantiza que el producto de cualquier prefijo o sufijo de `nums` cabe en un entero de 32 bits.
+### Ejemplo 2
+**Entrada:** `nums = [1]`  
+**Salida:** `1`  
+**Explicación:** El subarreglo `[1]` tiene la suma más grande: `1`.
 
-Debes escribir un algoritmo que se ejecute en **O(n)** tiempo y sin usar la operación de división.
+### Ejemplo 3
+**Entrada:** `nums = [5,4,-1,7,8]`  
+**Salida:** `23`  
+**Explicación:** El subarreglo `[5,4,-1,7,8]` tiene la suma más grande: `23`.
 
-### 🧠 Ejemplos
+### Restricciones
+- `1 <= nums.length <= 10^5`
+- `-10^4 <= nums[i] <= 10^4`
 
-#### Ejemplo 1
-```text
-Entrada: nums = [1,2,3,4]
-Salida: [24,12,8,6]
-```
-
-#### Ejemplo 2
-```text
-Entrada: nums = [-1,1,0,-3,3]
-Salida: [0,0,9,0,0]
-```
-
-### ⚙️ Restricciones
-
-- 2 <= nums.length <= 10⁵
-- -30 <= nums[i] <= 30
-- Se garantiza que `answer[i]` cabe en un entero de 32 bits.
-
-🚀 Desafío adicional
-
-¿Puedes resolver el problema con O(1) de complejidad espacial adicional?
-(El arreglo de salida no cuenta como espacio extra para el análisis de complejidad espacial.)
+### Follow-up
+Si ya encontraste la solución en **O(n)**, intenta implementar otra usando el método de **divide y vencerás**, que es más sutil.
