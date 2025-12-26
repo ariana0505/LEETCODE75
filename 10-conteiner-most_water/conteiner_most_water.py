@@ -1,12 +1,12 @@
-height = [1,1]
-Output: 1
-maximum_area = 0
-l, r = 0 , len(height)-1
-while l < r:
-    area_actual = min(height[l], height[r]) * ( r - l)
-    maximum_area = max(area_actual,maximum_area)
-    if l< r:
-        l =l + 1
+height = [7,9,3,1,7,15,10,4,5]
+l,r= 0 , len(height)-1
+area_maxima = 0
+while l<r :
+    area = min(height[l], height[r]) * (r-l)
+    area_maxima = max(area_maxima,area)
+    if height[l]> height[r]:
+        r-=1
     else:
-        r = r -1
-print(maximum_area)
+        l+= 1
+
+print(area_maxima)
