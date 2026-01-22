@@ -1,0 +1,10 @@
+a = -1
+b = -4
+mask = 0xFFFFFFFF
+MAX = 0x7FFFFFFF
+while b != 0:
+    sum = (a ^ b) & mask
+    carry = ((a & b) << 1) & mask
+    a = sum
+    b = carry
+print(a if a <= MAX else ~(a ^ mask))
