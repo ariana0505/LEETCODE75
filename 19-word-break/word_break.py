@@ -1,5 +1,5 @@
 s = "leetcode"
-wordDict = ["leet","cod"] #palabras que debe contener la cadena
+wordDict = ["leet","code"] #palabras que debe contener la cadena
 
 dp = [False] * (len(s)+ 1)
 dp[len(s)] = True

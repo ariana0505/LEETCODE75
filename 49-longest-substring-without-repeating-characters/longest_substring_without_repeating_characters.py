@@ -1,12 +1,14 @@
 s = "abcabcbb"
+caracteres_vistos = {}
+maximo_subtring = 0
 l = 0
-char_set = set()
-max_len = 0
 
-for r in range(len(s)):
-    while s[r] in char_set:
-        char_set.remove(s[l])
-        l += 1
+for r , caracter in enumerate(s):
+    if caracter in caracteres_vistos and caracteres_vistos[caracter]>= l:
+        l = caracteres_vistos[caracter] + 1
+    
+    caracteres_vistos[caracter] = r
 
-    char_set.add(s[r])
-    max_len = max(max_len, r - l + 1)
+    maximo_subtring = max(maximo_subtring, r - l + 1)
+
+print(maximo_subtring)
